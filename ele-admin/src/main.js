@@ -43,9 +43,12 @@ Object.keys(filters).forEach(key => {
 
 Vue.config.productionTip = false
 
+Vue.component('App', App);
+
 new Vue({
   el: '#app',
   router,
   store,
+  // template: '<App/>'
   render: h => h(App)
 })

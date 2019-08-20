@@ -25,6 +25,9 @@ module.exports = {
    * In most cases please use '/' !!!
    * Detail: https://cli.vuejs.org/config/#publicpath
    */
+  // 是否包含运行时编译
+  // runtimeCompiler: true,
+
   publicPath: '/',
   outputDir: 'dist',
   assetsDir: 'static',
@@ -41,7 +44,7 @@ module.exports = {
       // change xxx-api/login => mock/login
       // detail: https://cli.vuejs.org/config/#devserver-proxy
       [process.env.VUE_APP_BASE_API]: {
-        // target: `http://169.254.12.68:9527/mock`,
+        // target: `http://127.0.0.1:${port}/mock`,
         target: `http://elm.cangdu.org`,
         changeOrigin: true,
         pathRewrite: {
