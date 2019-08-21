@@ -23,6 +23,11 @@ import { mapState } from 'vuex'
 
 export default {
   name: 'Layout',
+  data(){
+    return {
+      list: [2,3,4]
+    }
+  },
   components: {
     AppMain,
     Navbar,
@@ -30,6 +35,14 @@ export default {
     Settings,
     Sidebar,
     TagsView
+  },
+  watch: {
+    $route(route) {
+      console.log('watch $route.....11111', this.list);
+      // if (this.device === 'mobile' && this.sidebar.opened) {
+      //   store.dispatch('app/closeSideBar', { withoutAnimation: false })
+      // }
+    }
   },
   mixins: [ResizeMixin],
   computed: {

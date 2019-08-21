@@ -4,8 +4,14 @@ const { body } = document
 const WIDTH = 992 // refer to Bootstrap's responsive design
 
 export default {
+  data(){
+    return {
+      list: [1,2,3]
+    }
+  },
   watch: {
     $route(route) {
+      console.log('watch $route.....');
       if (this.device === 'mobile' && this.sidebar.opened) {
         store.dispatch('app/closeSideBar', { withoutAnimation: false })
       }

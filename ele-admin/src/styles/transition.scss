@@ -19,12 +19,12 @@
 
 .fade-transform-enter {
   opacity: 0;
-  transform: translateX(-30px);
+  transform: translateY(-500px);
 }
 
 .fade-transform-leave-to {
   opacity: 0;
-  transform: translateX(30px);
+  transform: translateY(500px);
 }
 
 /* breadcrumb transition */
